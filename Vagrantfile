@@ -13,11 +13,6 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "loch-tech/debian-12-bookworm-ch"
-  #config.vm.box = "debian-12-bookworm-ch"
-  #config.vm.box = "loch-tech/debian-12-bookworm-ch-xfce"
-  #config.vm.box = "debian-12-bookworm-ch-xfce"
-  #config.vm.box = "loch-tech/debian-12-bookworm-ch-kde"
-  #config.vm.box = "debian-12-bookworm-ch-kde"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -44,4 +39,5 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "scripts/spark.sh"
+  config.vm.provision "shell", path: "scripts/pyspark.sh"
 end
